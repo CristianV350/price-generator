@@ -4,7 +4,7 @@
   "description": "Application Description",
   "main": "server.js",
   "scripts": {
-    "start": "node --trace-deprecation server.js -p $PORT"
+    "start": "node --trace-deprecation server.js"
   },
   "repository": {
     "type": "git",
