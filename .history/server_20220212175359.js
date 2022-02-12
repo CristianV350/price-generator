@@ -168,6 +168,6 @@ app.post('/export', (req, res) => {
 })
 
 
-app.listen(process.env.PORT, '0.0.0.0', () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log("Application started and Listening on port 3000");
 });
