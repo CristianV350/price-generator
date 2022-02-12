@@ -1,0 +1,130 @@
+<html>
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="add">
+        <form method="POST" action="" id="form">
+            <div>
+                <label for="name">Nume Produs</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div>
+                <label for="color">Culoare</label>
+                <input type="text" name="color" id="color" />
+            </div>
+            <div>
+                <label for="display">Ecran</label>
+                <input type="text" name="display" id="display" />
+            </div>
+            <div>
+                <label for="memory">Memorie</label>
+                <input type="text" name="memory" id="memory" />
+            </div>
+            <div>
+                <label for="battery">Baterie</label>
+                <input type="text" name="battery" id="battery" />
+            </div>
+            <div>
+                <label for="camera">Camera</label>
+                <input type="text" name="camera" id="camera" />
+            </div>
+            <div>
+                <label for="state">Starea</label>
+                <input type="text" name="state" id="state" />
+            </div>
+            <div>
+                <label for="price">Pret standard</label>
+                <input type="text" name="price" id="price" />
+            </div>
+            <div>
+                <label for="rate">Pret rate</label>
+                <input type="text" name="rate" id="rate" />
+            </div>
+            <div>
+                <label for="waranty">Pret garantie</label>
+                <input type="text" name="waranty" id="waranty" />
+            </div>
+            <input type="hidden" name="id" value="" />
+            <div class="submit"><button >Submit</button></div>
+        </form>
+    </div>
+    <div id="list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Culoare</th>
+                    <th>Memorie</th>
+                    <th>Camera</th>
+                    <th>Ecran</th>
+                    <th>Baterie</th>
+                    <th>Starea</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <button id="export">Export</button>
+<div id="body">
+
+    <div class="tag">
+        <h2>Amazon Kindle</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>16/1 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>0.3 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>7 Ore</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>299 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>Nu exista</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>50 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script>
+</body>
+</html>

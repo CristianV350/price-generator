@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <style>
+            #body{
+              display:flex;
+              flex-wrap:wrap;
+              width: 21cm;
+              height:28cm;
+              column-gap:20px;
+              row-gap:20px;
+            }
+            h1{
+
+            }
+            h2{
+                font-size: 24px;
+            }
+            h3{
+                font-size: 22px;
+            }
+            h4{
+                font-size: 18px;
+            }
+            h5{
+                font-size: 16px;
+                margin-top: 0;
+            }
+            #tag{
+                border:4px solid black;
+                padding:0 0 20px 0;
+                width:5.2cm;
+                height:8cm;
+            }
+            #tag > h2{
+                margin-top: 0;
+                background-color: black;
+                color:white;
+                padding:5px;
+                font-size: 18px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                row-gap: 7px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 0;
+            }
+
+            ul li{
+                border-bottom: 2px solid black;
+                font-weight: bold
+            }
+
+            ul li span:first-child{
+                font-size: 14px;
+                font-weight: bold
+            }
+
+            ul li span:nth-child(2){
+                font-size: 14px;
+                font-weight: bold
+            }
+
+            div{
+                width:5.2cm;
+                text-align: center;
+            }
+            .prices h2,.prices p, .prices h4, .prices h3{
+                margin:0
+            }
+            .prices{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+            #second-prices{
+                display:flex;
+                justify-content: space-around;
+                column-gap: 5px;
+
+            }
+            #second-prices > div{
+                width:fit-content;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+
+    <body>
+      <div id="body">
+
+        <div id="tag">
+            <h2>Amazon Kindle</h2>
+            <ul style="width:5cm;">
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Culoare:</span>
+                    <span>Black</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Ecran:</span>
+                      <span>7</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Memorie:</span>
+                    <span>16/1 GB</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Camera:</span>
+                    <span>0.3 MP</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Baterie:</span>
+                    <span>7 Ore</span>
+                </li>
+                 <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Starea:</span>
+                    <span>Second Hand</span>
+                </li>
+            </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>299 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>Nu exista</h5>
+                </div>
+                <div>
+                    <p>Pret Asigurare</p>
+                    <h5>50 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div id="tag">
+            <h2>Samsung Tab 3</h2>
+            <ul style="width:5cm;">
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Culoare:</span>
+                    <span>White</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Ecran:</span>
+                      <span>7</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Memorie:</span>
+                    <span>8/1 GB</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Camera:</span>
+                    <span>1.5 MP</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Baterie:</span>
+                    <span>400 mAh</span>
+                </li>
+                 <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Starea:</span>
+                    <span>Second Hand</span>
+                </li>
+            </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1199 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>109 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Asigurare</p>
+                    <h5>850 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div id="tag">
+            <h2>Emachine NAV51</h2>
+            <ul style="width:5cm;">
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Procesor:</span>
+                    <span>Intel Atom 1.66Ghz</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Ecran:</span>
+                      <span>10.1</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Memorie:</span>
+                    <span>250/2 GB</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Sistem Operare:</span>
+                    <span>Windows 7</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Baterie:</span>
+                    <span>2200 mAh</span>
+                </li>
+                 <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Starea:</span>
+                    <span>Second Hand</span>
+                </li>
+            </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1299 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>241 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Asigurare</p>
+                    <h5>850 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div id="tag">
+            <h2>Samsung Tab 4</h2>
+            <ul style="width:5cm;">
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Culoare:</span>
+                    <span>Twilight Black</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Ecran:</span>
+                      <span>7</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Memorie:</span>
+                    <span>8/1.5 GB</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Camera:</span>
+                    <span>3 MP</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Baterie:</span>
+                    <span>4000 mAh</span>
+                </li>
+                 <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Starea:</span>
+                    <span>Second Hand</span>
+                </li>
+            </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>6999 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>419 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Asigurare</p>
+                    <h5>850 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div id="tag">
+            <h2>Samsung Tab 4</h2>
+            <ul style="width:5cm;">
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Culoare:</span>
+                    <span>Twilight Black</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Ecran:</span>
+                      <span>7</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Memorie:</span>
+                    <span>8/1.5 GB</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Camera:</span>
+                    <span>3 MP</span>
+                </li>
+                <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Baterie:</span>
+                    <span>4000 mAh</span>
+                </li>
+                 <li style="width:5cm;display:flex;justify-content: space-between;">
+                    <span>Starea:</span>
+                    <span>Second Hand</span>
+                </li>
+            </ul>
+            <div class="prices">
+                <div>
+                    <p>Pret standard</p>
+                <h2>6999 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>419 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Asigurare</p>
+                    <h5>850 lei / an</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "Pret",
+  "version": "0.0.1",
+  "description": "Application Description",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --trace-deprecation server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "dependencies": {
+    "bootbox": "^5.5.2",
+    "browser-sync": "^2.27.7",
+    "cheerio": "^1.0.0-rc.10",
+    "dat-gui": "latest",
+    "download": "^8.0.0",
+    "express": "^4.17.2",
+    "html-pdf-node": "^1.0.8",
+    "jsdom": "^19.0.0",
+    "path": "latest",
+    "pdf-creator-node": "^2.2.4",
+    "pdfkit": "^0.13.0",
+    "q": "latest",
+    "sequelize": "latest",
+    "tedious": "latest",
+    "uuid": "^8.3.2"
+  }
+}

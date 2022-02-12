@@ -1,0 +1,2087 @@
+<html>
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.css"/>
+  <ink rel="stylesheet" href="style.css"></ink>
+  <style>
+        #body {
+            display: flex;
+            flex-wrap: wrap;
+            width: 21cm;
+            height: 28cm;
+            column-gap: 20px;
+            row-gap: 40px;
+        }
+
+        @media print {
+          .tag {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            page-break-before: avoid;
+            page-break-after: avoid;
+          }
+        }
+        .tag {
+          break-inside: avoid;
+          position: relative;
+        }
+
+        h1 {
+
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h5 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .tag {
+            border: 4px solid black;
+            padding: 0 0 20px 0;
+            width: 5.2cm;
+            height: 8.5cm;
+        }
+        .tag:nth-child(2n+6),.tag:nth-child(2n+4),.tag:nth-child(2n+5)  {
+          margin-top: 200px;
+        }
+        .tag > h2 {
+            margin-top: 0;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 7px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0;
+        }
+
+        ul li {
+            border-bottom: 2px solid black;
+            font-weight: bold
+        }
+
+        ul li span:first-child {
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        ul li span:nth-child(2) {
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        .tag {
+            width: 5.2cm;
+            text-align: center;
+        }
+
+        .prices h2, .prices p, .prices h4, .prices h3 {
+            margin: 0
+        }
+
+        .prices {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        #second-prices {
+            display: flex;
+            justify-content: space-around;
+            column-gap: 5px;
+
+        }
+
+        #second-prices > div {
+            width: fit-content;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="add">
+        <form method="POST" action="">
+            <div>
+                <label for="name">Nume Produs</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div>
+                <label for="color">Culoare</label>
+                <input type="text" name="color" id="color" />
+            </div>
+            <div>
+                <label for="display">Ecran</label>
+                <input type="text" name="display" id="display" />
+            </div>
+            <div>
+                <label for="memory">Memorie</label>
+                <input type="text" name="memory" id="memory" />
+            </div>
+            <div>
+                <label for="battery">Baterie</label>
+                <input type="text" name="battery" id="battery" />
+            </div>
+            <div>
+                <label for="camera">Camera</label>
+                <input type="text" name="camera" id="camera" />
+            </div>
+            <div>
+                <label for="state">Starea</label>
+                <input type="text" name="state" id="state" />
+            </div>
+            <div>
+                <label for="price">Pret standard</label>
+                <input type="text" name="price" id="price" />
+            </div>
+            <div>
+                <label for="rate">Pret rate</label>
+                <input type="text" name="rate" id="rate" />
+            </div>
+            <div>
+                <label for="waranty">Pret garantie</label>
+                <input type="text" name="waranty" id="waranty" />
+            </div>
+            <div class="submit"><button >Submit</button></div>
+        </form>
+    </div>
+    <div id="list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Culoare</th>
+                    <th>Memorie</th>
+                    <th>Camera</th>
+                    <th>Ecran</th>
+                    <th>Baterie</th>
+                    <th>Starea</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+<div id="body">
+
+    <div class="tag">
+        <h2>Amazon Kindle</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>16/1 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>0.3 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>7 Ore</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>299 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>Nu exista</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>50 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Tab 3</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>White</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>8/1 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>1.5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>400 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1199 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>109 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>850 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Emachine NAV51</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Procesor:</span>
+                <span>Intel Atom 1.66Ghz</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>10.1</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>250/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Sistem Operare:</span>
+                <span>Windows 7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2200 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1039 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>241 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>259 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Tab 4</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Twilight Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>8/1.5 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>3 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>6020 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>709 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>979 lei / an</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Huawei Media Pad TS</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>10.1</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>5100 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>2160 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>259 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>540 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple Ipad 4</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Space Gray</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>9.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/1 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>5/1.2 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>11560 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1999 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>259 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>499 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung S5</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>White</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.1</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>16/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>16 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2800 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1120 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>199 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>499 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Galaxy J701-J7 NEO</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gold</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5 SUPER AMOLED</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>16/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>13/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1680 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>172 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>419 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung S3</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>White</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.8</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>16/1 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>8/1.9 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2100 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1199lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>123lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>239 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- stopped here -->
+    <div class="tag">
+        <h2>Motorola Moto Z Play</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>16/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3510 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>2727lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>339 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>572 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Lenovo K5 Play</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Blue</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>13 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1359lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>174 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>339lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Galaxy J7 Prime</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>13/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3300 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1599 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>164 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>399lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Xiaomi Redmi Note 10S</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Onyx Gray</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/6 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>64/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>5000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>4699 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>452 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Huawei P40 Pro</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.58</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>256/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>50/12 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4200 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>14599 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>1406 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>iPad Mini Wi-Fi</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>8/7 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>5124 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>8199 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>789 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Oppo Reno 4Z</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Ink Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.57</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>48/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>7999 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>770 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 7</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gold</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1960 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>3528 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>362 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>671 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 7</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black Matte</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1960 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>3528 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>362 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>671 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone SE</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>32/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/1.2 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1624 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1600 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>164 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>399 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 8 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Red</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2691 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>7568lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>778   lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1231 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 8 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gold</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2691 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>7304 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>751 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>995 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 7 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gold</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>2900 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>4200 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>431 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>799 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone SE 2020</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Red</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1821 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>6192 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>636 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1007 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 8</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gold</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1821 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>5676 lei </h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>583 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>923 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone XS Max</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/4 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3174 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>2769 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>199 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>529 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 8</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1821 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>4704 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>483 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>895 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone 8</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Red</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/2 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1821 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>5160 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>530 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>839 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple iPhone SE 2020</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Gray</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>4.7</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/3 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>1821 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>6880 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>7072599 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1119 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung A50</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.4</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/4 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>25/8/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>2080 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>213 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>519 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Huawei P40 Lite</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Midnight Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.4</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>256/6 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>48 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4200 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>4999 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>481 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Huawei P40 Pro</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.58</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>256/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>50 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4200 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>14599lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5></h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1331 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Galaxy A7</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Grape</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/4 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>24 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3300 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>2016 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>207 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>383 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Galaxy A12</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>5.5</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/4 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>48/8 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>5000 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Sigilat</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>3699 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>356 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>Este inclus</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung Note 10 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.8</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>256/12 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/1.5-2.4 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4300 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>11700 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>1203 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1299 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung S10 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Prisma Green</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.4</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/16/12 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4100 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>10800 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>1110 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1199 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung S9 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.2</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>64/6 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>3500 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>6880 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>707 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1119 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Samsung S10 Plus</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Prism Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.4</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>128/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>12/5 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4100 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>7920 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>814 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1079 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Huawei P40 Pro</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Black</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>6.58</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>256/8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>50 MP</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>4200 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>11340 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>1166 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>1259 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple Watch</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>42mm</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>4/512 Mb</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>-</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>250 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>1040 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>106 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>259 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple Watch 4</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>44mm</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>8 GB</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>-</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>292 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>3698 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>380 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>601 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tag">
+        <h2>Apple Watch Series 1</h2>
+        <ul style="width:5cm;">
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Culoare:</span>
+                <span>Silver</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Ecran:</span>
+                <span>38mm</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Memorie:</span>
+                <span>512 Mb</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Camera:</span>
+                <span>-</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Baterie:</span>
+                <span>205 mAh</span>
+            </li>
+            <li style="width:5cm;display:flex;justify-content: space-between;">
+                <span>Starea:</span>
+                <span>Second Hand</span>
+            </li>
+        </ul>
+        <div class="prices">
+            <div>
+                <p>Pret standard</p>
+                <h2>960 lei</h2>
+            </div>
+            <div id="second-prices">
+                <div>
+                    <p>Pret in rate / 12 luni</p>
+                    <h5>98 lei*</h5>
+                </div>
+                <div>
+                    <p>Pret Garantie</p>
+                    <h5>239 lei / an</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script>
+</body>
+</html>
